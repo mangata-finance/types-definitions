@@ -1,0 +1,35 @@
+{
+  "name": "@mangata-finance/type-definitions",
+  "version": "1.0.0",
+  "description": "Type definitions for Mangata Finance",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "license": "GPL-3.0",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -fr dist/* && tsup",
+    "peer": "add-no-save --peer-deps"
+  },
+  "keywords": [],
+  "author": "Michal",
+  "devDependencies": {
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.6",
+    "yarn-add-no-save": "^1.0.3"
+  },
+  "peerDependencies": {
+    "@polkadot/types": "^10.7.3"
+  }
+}
