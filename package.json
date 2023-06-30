@@ -1,6 +1,6 @@
 {
   "name": "@mangata-finance/type-definitions",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Type definitions for Mangata Finance",
   "type": "module",
   "module": "./dist/index.js",
