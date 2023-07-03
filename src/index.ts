@@ -161,7 +161,7 @@ export const mRpc = {
       type: "XYKRpcResult<Balance>"
     },
     get_max_instant_unreserve_amount: {
-      description: "",
+      description: "Instant unreserve amount",
       params: [
         {
           name: "user",
