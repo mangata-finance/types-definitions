@@ -1,3 +1,10 @@
+# [1.0.0-rc.4](https://github.com/mangata-finance/types-definitions/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2023-07-03)
+
+
+### Features
+
+* add descriptions ([d0754cd](https://github.com/mangata-finance/types-definitions/commit/d0754cdaa80d575ea418ac24738a0fba3a54fc20))
+
 # [1.0.0-rc.3](https://github.com/mangata-finance/types-definitions/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2023-06-30)
 
 
