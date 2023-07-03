@@ -1,6 +1,6 @@
 {
   "name": "@mangata-finance/type-definitions",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.4",
   "description": "Type definitions for Mangata Finance",
   "type": "module",
   "module": "./dist/index.js",
@@ -25,6 +25,10 @@
   "keywords": [],
   "author": "Michal",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.3",
+    "semantic-release-export-data": "^1.0.1",
     "tsup": "^6.7.0",
     "typescript": "^5.1.6",
     "yarn-add-no-save": "^1.0.3"

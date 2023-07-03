@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - "main"
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Setup Node version and cache dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "yarn"
+
+      - name: Install deps
+        run: yarn install
+
+      - name: Install peer deps
+        run: yarn peer
+
+      - name: Build
+        run: yarn build
+
+      - name: create release
+        run: npx semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
