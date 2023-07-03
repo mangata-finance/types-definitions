@@ -26,7 +26,7 @@ jobs:
       - name: Install peer deps
         run: yarn peer
 
-      - name: Build the SDK
+      - name: Build
         run: yarn build
 
       - name: create release
