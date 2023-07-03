@@ -1,3 +1,20 @@
+# 1.0.0 (2023-07-03)
+
+
+### Bug Fixes
+
+* add escr ([8b73f0a](https://github.com/mangata-finance/types-definitions/commit/8b73f0a428e7d7593db4a5779d26494068c8d813))
+
+
+### Features
+
+* add type definition for mangata ([2e3fcce](https://github.com/mangata-finance/types-definitions/commit/2e3fcce90dad378bb692cea1d57cf2594d1d81cf))
+
+
+### BREAKING CHANGES
+
+* split types pacakge into two packages
+
 # [1.0.0-rc.4](https://github.com/mangata-finance/types-definitions/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2023-07-03)
 
 
