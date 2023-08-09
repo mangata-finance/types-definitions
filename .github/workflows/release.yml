@@ -17,16 +17,16 @@ jobs:
       - name: Setup Node version and cache dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "16"
           cache: "yarn"
 
       - name: Install deps
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Install peer deps
         run: yarn peer
 
-      - name: Build the SDK
+      - name: Build
         run: yarn build
 
       - name: create release
