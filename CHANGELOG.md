@@ -1,3 +1,15 @@
+# [2.0.0-rc.1](https://github.com/mangata-finance/types-definitions/compare/v1.0.0...v2.0.0-rc.1) (2023-08-21)
+
+
+### Features
+
+* update types ([6787d0e](https://github.com/mangata-finance/types-definitions/commit/6787d0e2db98b1a7592e668038d7a561761d83d0))
+
+
+### BREAKING CHANGES
+
+* input and output types change to simplify rpc
+
 # 1.0.0 (2023-07-03)
 
 
