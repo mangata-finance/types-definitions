@@ -1,3 +1,10 @@
+# [2.0.0-rc.2](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2023-08-21)
+
+
+### Features
+
+* add NumberOrHex type ([6c6d712](https://github.com/mangata-finance/types-definitions/commit/6c6d7123b05763fd7944665d7c4dc4130dfdc297))
+
 # [2.0.0-rc.1](https://github.com/mangata-finance/types-definitions/compare/v1.0.0...v2.0.0-rc.1) (2023-08-21)
 
 
