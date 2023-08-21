@@ -14,13 +14,6 @@ export const mTypes = {
     seed: "ShufflingSeed",
     count: "BlockNumber"
   },
-  XYKRpcResult: {
-    price: "Balance"
-  },
-  RPCAmountsResult: {
-    firstAssetAmount: "Balance",
-    secondAssetAmount: "Balance"
-  },
   VestingInfo: {
     locked: "Balance",
     perBlock: "Balance",
@@ -41,18 +34,18 @@ export const mRpc = {
       params: [
         {
           name: "input_reserve",
-          type: "Balance"
+          type: "NumberOrHex"
         },
         {
           name: "output_reserve",
-          type: "Balance"
+          type: "NumberOrHex"
         },
         {
           name: "sell_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     calculate_sell_price: {
       description:
@@ -60,18 +53,18 @@ export const mRpc = {
       params: [
         {
           name: "input_reserve",
-          type: "Balance"
+          type: "NumberOrHex"
         },
         {
           name: "output_reserve",
-          type: "Balance"
+          type: "NumberOrHex"
         },
         {
           name: "sell_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     get_burn_amount: {
       description:
@@ -87,10 +80,10 @@ export const mRpc = {
         },
         {
           name: "liquidity_asset_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
-      type: "RPCAmountsResult<Balance>"
+      type: "RpcResult<(Balance,Balance)>"
     },
     calculate_sell_price_id: {
       description:
@@ -106,10 +99,10 @@ export const mRpc = {
         },
         {
           name: "sell_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     calculate_buy_price_id: {
       description:
@@ -125,10 +118,10 @@ export const mRpc = {
         },
         {
           name: "buy_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     calculate_rewards_amount: {
       description:
@@ -143,7 +136,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     calculate_balanced_sell_amount: {
       description:
@@ -151,14 +144,14 @@ export const mRpc = {
       params: [
         {
           name: "total_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         },
         {
           name: "reserve_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     get_max_instant_unreserve_amount: {
       description: "Instant unreserve amount",
@@ -172,7 +165,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     get_max_instant_burn_amount: {
       description: "",
@@ -186,7 +179,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "RpcResult<Balance>"
     },
     is_sell_asset_lock_free: {
       description: "",
@@ -197,7 +190,7 @@ export const mRpc = {
         },
         {
           name: "input_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
       type: "Option<bool>"
@@ -211,7 +204,7 @@ export const mRpc = {
         },
         {
           name: "input_amount",
-          type: "Balance"
+          type: "NumberOrHex"
         }
       ],
       type: "Option<bool>"
