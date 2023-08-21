@@ -46,7 +46,7 @@ export const mRpc = {
           type: "NumberOrHex"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_sell_price: {
       description:
@@ -65,7 +65,7 @@ export const mRpc = {
           type: "NumberOrHex"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     get_burn_amount: {
       description:
@@ -84,7 +84,7 @@ export const mRpc = {
           type: "NumberOrHex"
         }
       ],
-      type: "RpcResult<(Balance,Balance)>"
+      type: "(Balance,Balance)"
     },
     calculate_sell_price_id: {
       description:
@@ -103,7 +103,7 @@ export const mRpc = {
           type: "NumberOrHex"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_buy_price_id: {
       description:
@@ -122,7 +122,7 @@ export const mRpc = {
           type: "NumberOrHex"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_rewards_amount: {
       description:
@@ -137,7 +137,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_balanced_sell_amount: {
       description:
@@ -152,7 +152,7 @@ export const mRpc = {
           type: "NumberOrHex"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     get_max_instant_unreserve_amount: {
       description: "Instant unreserve amount",
@@ -166,7 +166,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     get_max_instant_burn_amount: {
       description: "",
@@ -180,7 +180,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     is_sell_asset_lock_free: {
       description: "",
