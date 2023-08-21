@@ -14,6 +14,7 @@ export const mTypes = {
     seed: "ShufflingSeed",
     count: "BlockNumber"
   },
+  NumberOrHex: "u128",
   VestingInfo: {
     locked: "Balance",
     perBlock: "Balance",
