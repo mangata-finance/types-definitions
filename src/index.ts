@@ -15,6 +15,7 @@ export const mTypes = {
     count: "BlockNumber"
   },
   NumberOrHex: "u128",
+  Balance: "u128",
   VestingInfo: {
     locked: "Balance",
     perBlock: "Balance",
