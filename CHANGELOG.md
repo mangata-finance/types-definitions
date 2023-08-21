@@ -1,3 +1,10 @@
+# [2.0.0-rc.4](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2023-08-21)
+
+
+### Bug Fixes
+
+* add Balance type ([9b22737](https://github.com/mangata-finance/types-definitions/commit/9b227378837715137cb113468bd0edc95586b740))
+
 # [2.0.0-rc.3](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2023-08-21)
 
 
