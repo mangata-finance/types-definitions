@@ -1,3 +1,10 @@
+# [2.0.0-rc.3](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2023-08-21)
+
+
+### Bug Fixes
+
+* remove RpcResult type ([78e0ace](https://github.com/mangata-finance/types-definitions/commit/78e0acefed6ca8be244b8d24b97059630af8bfaf))
+
 # [2.0.0-rc.2](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2023-08-21)
 
 
