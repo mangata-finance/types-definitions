@@ -1,3 +1,10 @@
+# [2.0.0-rc.5](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.4...v2.0.0-rc.5) (2023-08-23)
+
+
+### Bug Fixes
+
+* add enum ([ceed1a9](https://github.com/mangata-finance/types-definitions/commit/ceed1a9fd6408e7510722f0f4e36cd4d1865a8cd))
+
 # [2.0.0-rc.4](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2023-08-21)
 
 
