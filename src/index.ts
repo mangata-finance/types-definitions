@@ -14,12 +14,6 @@ export const mTypes = {
     seed: "ShufflingSeed",
     count: "BlockNumber"
   },
-  NumberOrHex: {
-    _enum: {
-      Number: "u64",
-      Hex: "U256"
-    }
-  },
   VestingInfo: {
     locked: "Balance",
     perBlock: "Balance",
@@ -40,15 +34,15 @@ export const mRpc = {
       params: [
         {
           name: "input_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "output_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "sell_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Balance"
@@ -59,15 +53,15 @@ export const mRpc = {
       params: [
         {
           name: "input_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "output_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "sell_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Balance"
@@ -86,7 +80,7 @@ export const mRpc = {
         },
         {
           name: "liquidity_asset_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "(Balance,Balance)"
@@ -105,7 +99,7 @@ export const mRpc = {
         },
         {
           name: "sell_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Balance"
@@ -124,7 +118,7 @@ export const mRpc = {
         },
         {
           name: "buy_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Balance"
@@ -150,11 +144,11 @@ export const mRpc = {
       params: [
         {
           name: "total_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "reserve_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Balance"
@@ -196,7 +190,7 @@ export const mRpc = {
         },
         {
           name: "input_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Option<bool>"
@@ -210,7 +204,7 @@ export const mRpc = {
         },
         {
           name: "input_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Option<bool>"
