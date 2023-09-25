@@ -12,7 +12,7 @@
     }
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "license": "GPL-3.0",
   "files": [
@@ -25,15 +25,15 @@
   "keywords": [],
   "author": "Michal",
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^19.0.3",
-    "semantic-release-export-data": "^1.0.1",
-    "tsup": "^6.7.0",
-    "typescript": "^5.1.6",
-    "yarn-add-no-save": "^1.0.3"
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "semantic-release": "22.0.5",
+    "semantic-release-export-data": "1.0.1",
+    "tsup": "7.2.0",
+    "typescript": "5.2.2",
+    "yarn-add-no-save": "1.0.3"
   },
   "peerDependencies": {
-    "@polkadot/types": "^10.7.3"
+    "@polkadot/types": "10.9.1"
   }
 }
