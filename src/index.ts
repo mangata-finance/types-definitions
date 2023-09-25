@@ -15,7 +15,7 @@ export const mTypes = {
     count: "BlockNumber"
   },
   RpcAssetMetadata: {
-    token_id: "TokenId",
+    tokenId: "TokenId",
     decimals: "u32",
     name: "Vec<u8>",
     symbol: "Vec<u8>"
