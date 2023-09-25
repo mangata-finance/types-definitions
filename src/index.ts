@@ -14,16 +14,13 @@ export const mTypes = {
     seed: "ShufflingSeed",
     count: "BlockNumber"
   },
-  VestingInfo: {
-    locked: "Balance",
-    perBlock: "Balance",
-    startingBlock: "BlockNumber"
+  RpcAssetMetadata: {
+    token_id: "TokenId",
+    decimals: "u32",
+    name: "Vec<u8>",
+    symbol: "Vec<u8>"
   },
   TokenId: "u32",
-  VestingInfosWithLockedAt: {
-    vestingInfosWithLockedAt:
-      "Vec<(VestingInfo<Balance, BlockNumber>, Balance)>"
-  }
 };
 
 export const mRpc = {
@@ -208,22 +205,16 @@ export const mRpc = {
         }
       ],
       type: "Option<bool>"
-    }
-  },
-  vesting: {
-    getVestingLockedAt: {
+    },
+    get_tradeable_tokens: {
       description: "",
-      params: [
-        {
-          name: "who",
-          type: "AccountId"
-        },
-        {
-          name: "token_id",
-          type: "TokenId"
-        }
-      ],
-      type: "VestingInfosWithLockedAt<Balance, BlockNumber>"
+      params: [],
+      type: "Vec<RpcAssetMetadata<TokenId>>"
+    },
+    get_liq_tokens_for_trading: {
+      description: "",
+      params: [],
+      type: "Vec<TokenId>"
     }
   }
 };
