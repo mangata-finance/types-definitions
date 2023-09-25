@@ -34,7 +34,7 @@ jobs:
         id: dry-run-release-version
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     outputs:
       new-release-published: ${{ steps.dry-run-release-version.outputs.new-release-published }}
       new-release-version: ${{ steps.dry-run-release-version.outputs.new-release-version }}
@@ -59,4 +59,4 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
