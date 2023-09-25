@@ -1,3 +1,10 @@
+# [2.0.0-rc.7](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2023-09-25)
+
+
+### Features
+
+* update rpc methods ([6939ce4](https://github.com/mangata-finance/types-definitions/commit/6939ce43934fcf4d13a8b973bc8ecf280af402dc))
+
 # [2.0.0-rc.6](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2023-08-24)
 
 
