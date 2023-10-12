@@ -14,16 +14,13 @@ export const mTypes = {
     seed: "ShufflingSeed",
     count: "BlockNumber"
   },
-  VestingInfo: {
-    locked: "Balance",
-    perBlock: "Balance",
-    startingBlock: "BlockNumber"
+  RpcAssetMetadata: {
+    tokenId: "TokenId",
+    decimals: "u32",
+    name: "Vec<u8>",
+    symbol: "Vec<u8>"
   },
   TokenId: "u32",
-  VestingInfosWithLockedAt: {
-    vestingInfosWithLockedAt:
-      "Vec<(VestingInfo<Balance, BlockNumber>, Balance)>"
-  }
 };
 
 export const mRpc = {
@@ -34,18 +31,18 @@ export const mRpc = {
       params: [
         {
           name: "input_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "output_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "sell_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_sell_price: {
       description:
@@ -53,18 +50,18 @@ export const mRpc = {
       params: [
         {
           name: "input_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "output_reserve",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "sell_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     get_burn_amount: {
       description:
@@ -80,10 +77,10 @@ export const mRpc = {
         },
         {
           name: "liquidity_asset_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
-      type: "RpcResult<(Balance,Balance)>"
+      type: "(Balance,Balance)"
     },
     calculate_sell_price_id: {
       description:
@@ -99,10 +96,10 @@ export const mRpc = {
         },
         {
           name: "sell_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_buy_price_id: {
       description:
@@ -118,10 +115,10 @@ export const mRpc = {
         },
         {
           name: "buy_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_rewards_amount: {
       description:
@@ -136,7 +133,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     calculate_balanced_sell_amount: {
       description:
@@ -144,14 +141,14 @@ export const mRpc = {
       params: [
         {
           name: "total_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         },
         {
           name: "reserve_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     get_max_instant_unreserve_amount: {
       description: "Instant unreserve amount",
@@ -165,7 +162,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     get_max_instant_burn_amount: {
       description: "",
@@ -179,7 +176,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "RpcResult<Balance>"
+      type: "Balance"
     },
     is_sell_asset_lock_free: {
       description: "",
@@ -190,7 +187,7 @@ export const mRpc = {
         },
         {
           name: "input_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Option<bool>"
@@ -204,26 +201,20 @@ export const mRpc = {
         },
         {
           name: "input_amount",
-          type: "NumberOrHex"
+          type: "Balance"
         }
       ],
       type: "Option<bool>"
-    }
-  },
-  vesting: {
-    getVestingLockedAt: {
+    },
+    get_tradeable_tokens: {
       description: "",
-      params: [
-        {
-          name: "who",
-          type: "AccountId"
-        },
-        {
-          name: "token_id",
-          type: "TokenId"
-        }
-      ],
-      type: "VestingInfosWithLockedAt<Balance, BlockNumber>"
+      params: [],
+      type: "Vec<RpcAssetMetadata<TokenId>>"
+    },
+    get_liq_tokens_for_trading: {
+      description: "",
+      params: [],
+      type: "Vec<TokenId>"
     }
   }
 };
