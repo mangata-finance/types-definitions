@@ -14,23 +14,13 @@ export const mTypes = {
     seed: "ShufflingSeed",
     count: "BlockNumber"
   },
-  XYKRpcResult: {
-    price: "Balance"
-  },
-  RPCAmountsResult: {
-    firstAssetAmount: "Balance",
-    secondAssetAmount: "Balance"
-  },
-  VestingInfo: {
-    locked: "Balance",
-    perBlock: "Balance",
-    startingBlock: "BlockNumber"
+  RpcAssetMetadata: {
+    tokenId: "TokenId",
+    decimals: "u32",
+    name: "Vec<u8>",
+    symbol: "Vec<u8>"
   },
   TokenId: "u32",
-  VestingInfosWithLockedAt: {
-    vestingInfosWithLockedAt:
-      "Vec<(VestingInfo<Balance, BlockNumber>, Balance)>"
-  }
 };
 
 export const mRpc = {
@@ -52,7 +42,7 @@ export const mRpc = {
           type: "Balance"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     calculate_sell_price: {
       description:
@@ -71,7 +61,7 @@ export const mRpc = {
           type: "Balance"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     get_burn_amount: {
       description:
@@ -90,7 +80,7 @@ export const mRpc = {
           type: "Balance"
         }
       ],
-      type: "RPCAmountsResult<Balance>"
+      type: "(Balance,Balance)"
     },
     calculate_sell_price_id: {
       description:
@@ -109,7 +99,7 @@ export const mRpc = {
           type: "Balance"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     calculate_buy_price_id: {
       description:
@@ -128,7 +118,7 @@ export const mRpc = {
           type: "Balance"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     calculate_rewards_amount: {
       description:
@@ -143,7 +133,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     calculate_balanced_sell_amount: {
       description:
@@ -158,7 +148,7 @@ export const mRpc = {
           type: "Balance"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     get_max_instant_unreserve_amount: {
       description: "Instant unreserve amount",
@@ -172,7 +162,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     get_max_instant_burn_amount: {
       description: "",
@@ -186,7 +176,7 @@ export const mRpc = {
           type: "TokenId"
         }
       ],
-      type: "XYKRpcResult<Balance>"
+      type: "Balance"
     },
     is_sell_asset_lock_free: {
       description: "",
@@ -215,22 +205,16 @@ export const mRpc = {
         }
       ],
       type: "Option<bool>"
-    }
-  },
-  vesting: {
-    getVestingLockedAt: {
+    },
+    get_tradeable_tokens: {
       description: "",
-      params: [
-        {
-          name: "who",
-          type: "AccountId"
-        },
-        {
-          name: "token_id",
-          type: "TokenId"
-        }
-      ],
-      type: "VestingInfosWithLockedAt<Balance, BlockNumber>"
+      params: [],
+      type: "Vec<RpcAssetMetadata<TokenId>>"
+    },
+    get_liq_tokens_for_trading: {
+      description: "",
+      params: [],
+      type: "Vec<TokenId>"
     }
   }
 };

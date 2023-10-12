@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node version and cache dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           cache: "yarn"
 
       - name: Install deps
@@ -34,3 +34,12 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+      - name: Merge main -> develop
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: develop
+          message: Merge main into develop
+          github_token: ${{ secrets.TOKEN }}
