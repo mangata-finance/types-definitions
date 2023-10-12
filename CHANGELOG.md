@@ -1,3 +1,26 @@
+# [2.0.0](https://github.com/mangata-finance/types-definitions/compare/v1.0.0...v2.0.0) (2023-10-12)
+
+
+### Bug Fixes
+
+* add Balance type ([9b22737](https://github.com/mangata-finance/types-definitions/commit/9b227378837715137cb113468bd0edc95586b740))
+* add enum ([ceed1a9](https://github.com/mangata-finance/types-definitions/commit/ceed1a9fd6408e7510722f0f4e36cd4d1865a8cd))
+* remove RpcResult type ([78e0ace](https://github.com/mangata-finance/types-definitions/commit/78e0acefed6ca8be244b8d24b97059630af8bfaf))
+* tokenId typo ([d9b2c5c](https://github.com/mangata-finance/types-definitions/commit/d9b2c5c8b094cf6db6a28a26ec824b5f4f48e1f1))
+* update types ([4871fdf](https://github.com/mangata-finance/types-definitions/commit/4871fdf37d731b10b33c5a5ca4aa20647b15e0ca))
+
+
+### Features
+
+* add NumberOrHex type ([6c6d712](https://github.com/mangata-finance/types-definitions/commit/6c6d7123b05763fd7944665d7c4dc4130dfdc297))
+* update rpc methods ([6939ce4](https://github.com/mangata-finance/types-definitions/commit/6939ce43934fcf4d13a8b973bc8ecf280af402dc))
+* update types ([6787d0e](https://github.com/mangata-finance/types-definitions/commit/6787d0e2db98b1a7592e668038d7a561761d83d0))
+
+
+### BREAKING CHANGES
+
+* input and output types change to simplify rpc
+
 # [2.0.0-rc.8](https://github.com/mangata-finance/types-definitions/compare/v2.0.0-rc.7...v2.0.0-rc.8) (2023-09-25)
 
 
